@@ -1,9 +1,14 @@
 # Makefile
 
-all: build
+all: clean build
 
 build:
-	go build -o terraform-provider-atlas.exe	
+	go build -o terraform-provider-atlas.exe
+	terraform init
+	terraform plan
 
-.PHONY: all build
+clean:
+	rm -f terraform-provider-atlas.exe
+
+.PHONY: all build clean
 

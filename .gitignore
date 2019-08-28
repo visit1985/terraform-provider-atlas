@@ -3,3 +3,6 @@
 *.iml
 
 *.exe
+.terraform/
+main.tf
+terraform.tfstate*
